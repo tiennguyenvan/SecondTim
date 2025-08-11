@@ -2,13 +2,13 @@
 
 ## Overview
 - Modular monolith CLI tool for macOS automation.
-- Event-driven workflow engine triggers task modules.
+- Event-driven workflow engine triggers block modules.
 - Principles: separation of concerns, extensibility, fail-safe, minimal coupling.
 
 ## Components
-- **Workflow Engine:** Orchestrates tasks, passes data, handles errors.
-- **Task Modules:** Independent scripts/classes for specific automations.
-- **Workflow Definitions:** YAML/config to list tasks and params.
+- **Workflow Engine:** Orchestrates blocks, passes data, handles errors.
+- **Block Modules:** Independent scripts/classes for specific automation functions.
+- **Workflow Definitions:** YAML/config to list blocks and parameters.
 - **Scheduler (optional):** Triggers workflows on schedule.
 - **Logging:** Centralized logs for runs and errors.
 - **CLI Interface:** Run workflows, list available ones.
@@ -16,17 +16,17 @@
 ## Data & Control Flow
 1. Trigger (CLI/Scheduler).
 2. Engine loads workflow definition.
-3. Engine runs each task module in order, passing outputs.
+3. Engine runs each block module in order, passing outputs.
 4. Logs every step; stops or continues based on errors.
 5. Final log/notifications.
 
 ## Extensibility
-- Plugin-like tasks discovered dynamically.
+- Plugin-like blocks discovered dynamically.
 - Config-driven workflows (no core code changes).
 - Loose coupling for easy swaps/replacements.
 
 ## Interface Contracts
-- **Task Module:** `execute(context) -> result` or raise `TaskError`.
+- **Block Module:** `execute(context) -> result` or raise `BlockError`.
 - **Engine/Scheduler:** Common `run_workflow(name)` entry point.
 - **Config Format:** Defined YAML/JSON structure for workflows.
 - **Error Handling:** Exceptions logged, workflow halts by default.
@@ -41,7 +41,7 @@
 ## Key Decisions
 - Modular monolith over microservices (simplicity).
 - YAML for workflow definitions (readable, safe).
-- AppleScript for app control, Python/shell for system tasks.
+- AppleScript for app control, Python/shell for system actions.
 - Fail-fast error strategy (transparent, simple).
 
 ## Maintainability

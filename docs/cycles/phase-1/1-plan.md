@@ -1,31 +1,31 @@
 # 1-plan.md
 
 ## Goals
-- Automate repetitive Mac tasks for internal use.
-- Provide a modular, extensible workflow runner.
-- Save time, reduce errors, and allow easy addition of new tasks.
+- Automate repetitive Mac workflows for internal use.
+- Provide a modular, extensible block-based workflow runner.
+- Save time, reduce errors, and allow easy addition of new blocks.
 
 ## Scope
-**In scope:** Mac task automation via code workflows, CLI, basic logging.  
+**In scope:** Mac automation via code-defined workflows, CLI, basic logging.  
 **Out of scope:** GUI, cross-platform support, advanced AI, cloud integration.
 
 ## Feature Priorities (MoSCoW)
-- **Must:** Workflow engine, initial task library, config-based workflows, CLI, logging.
+- **Must:** Workflow engine, initial block library, config-based workflows, CLI, logging.
 - **Should:** Scheduling, error notifications, plugin system.
 - **Could:** Simple GUI, ML suggestions, cross-platform.
 - **Won’t:** Cloud service integration, full NLP interface.
 
 ## Milestones
 1. **MVP** – Engine, sample workflows, CLI, logging.
-2. **Library & Scheduling** – More tasks, scheduling support.
-3. **Plugin Architecture** – Add tasks without core changes.
+2. **Library & Scheduling** – More blocks, scheduling support.
+3. **Plugin Architecture** – Add blocks without core changes.
 4. **Polish & Beta** – Error handling, notifications, feedback.
 
 ## Success Criteria
 - Automate ≥5 major workflows.
 - Save ~50% manual time on targeted processes.
 - ≥95% workflow success rate over 1 month.
-- Add new tasks in <1 day.
+- Add new blocks in <1 day.
 - Positive internal feedback.
 
 ## Risks & Mitigation

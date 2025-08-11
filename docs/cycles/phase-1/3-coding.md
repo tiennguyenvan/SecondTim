@@ -7,14 +7,14 @@
 - Create repo, project structure, and initial CLI.
 - Implement Workflow Engine skeleton.
 - Add logging module.
-- Implement 1–2 simple task modules.
+- Implement 1–2 simple block modules.
 
 **Backlog:**
-- [ ] Create repo and folder structure (`engine/`, `tasks/`, `workflows/`, `cli/`, `logs/`).
+- [v] Create repo and folder structure (`engine/`, `blocks/`, `workflows/`, `cli/`, `logs/`).
 - [ ] Setup CLI entry point (`secondtim run <workflow>`).
-- [ ] Implement Engine to load YAML workflow and sequentially run tasks.
+- [ ] Implement Engine to load YAML workflow and sequentially run blocks.
 - [ ] Add centralized logging (stdout + file).
-- [ ] Implement sample tasks:  
+- [ ] Implement sample blocks:  
   - Launch an app.  
   - Move files between folders.
 - [ ] Write example YAML workflow and run it end-to-end.
@@ -22,19 +22,19 @@
 
 ---
 
-### Sprint 2 – Task Library Expansion & Config Improvements (2 weeks)
+### Sprint 2 – Block Library Expansion & Config Improvements (2 weeks)
 **Goals:**
-- Add more built-in task modules.
+- Add more built-in block modules.
 - Improve config parsing and validation.
-- Pass data between tasks.
+- Pass data between blocks.
 
 **Backlog:**
-- [ ] Implement 3–5 more tasks (e.g., copy files, rename files, open URL, send email via AppleScript, run shell command).
-- [ ] Add input/output data passing between tasks in Engine.
+- [ ] Implement 3–5 more blocks (e.g., copy files, rename files, open URL, send email via AppleScript, run shell command).
+- [ ] Add input/output data passing between blocks in Engine.
 - [ ] Add workflow config validation (schema check).
 - [ ] Allow parameters in workflow config (YAML placeholders).
-- [ ] Update docs with new tasks and config format.
-- [ ] Write tests for Engine and at least 3 tasks.
+- [ ] Update docs with new blocks and config format.
+- [ ] Write tests for Engine and at least 3 blocks.
 
 ---
 
@@ -55,15 +55,15 @@
 
 ### Sprint 4 – Plugin Architecture & Extensibility (2 weeks)
 **Goals:**
-- Refactor Engine to dynamically load task modules.
-- Document how to add new tasks.
+- Refactor Engine to dynamically load block modules.
+- Document how to add new blocks.
 
 **Backlog:**
-- [ ] Implement dynamic task discovery (scan `tasks/` dir).
-- [ ] Define `TaskInterface` and enforce it for all modules.
-- [ ] Refactor existing tasks to match interface.
-- [ ] Add example “external” task to prove plugin loading works.
-- [ ] Write `ADDING_TASKS.md` guide.
+- [ ] Implement dynamic block discovery (scan `blocks/` dir).
+- [ ] Define `BlockInterface` and enforce it for all modules.
+- [ ] Refactor existing blocks to match interface.
+- [ ] Add example “external” block to prove plugin loading works.
+- [ ] Write `ADDING_BLOCKS.md` guide.
 - [ ] Tag as `v1.0` – Phase 1 complete.
 
 ---
